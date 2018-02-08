@@ -10,6 +10,9 @@ cache: yarn
 install:
   - yarn
 
+before_script:
+  - echo -e "Host $STAGING_SERVER\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+
 script:
   - yarn build:production
 
