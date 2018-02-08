@@ -1,8 +1,7 @@
 language: node_js
 
 addons:
-  ssh_known_hosts:
-  - $STAGING_SERVER
+  ssh_known_hosts: $STAGING_SERVER
 
 node_js: '8'
 
@@ -10,9 +9,6 @@ cache: yarn
 
 install:
   - yarn
-
-before_script:
-  - echo -e "Host $STAGING_SERVERntStrictHostKeyChecking non" >> ~/.ssh/config
 
 script:
   - yarn build:production
