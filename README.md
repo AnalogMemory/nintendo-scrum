@@ -1,4 +1,4 @@
-# Nintendo Switch + Tech - WordPress Theme
+# NTSP - WordPress Theme
 
 Required plugins:
 

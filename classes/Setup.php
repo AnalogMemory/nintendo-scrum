@@ -15,8 +15,8 @@ class NST_Theme_Setup {
     // Register Menus
     register_nav_menus(
       array(
-        'primary' => esc_html__('Primary', 'nintendo_tech'),
-        'footer' => esc_html__('Footer', 'nintendo_tech')
+        'primary' => esc_html__('Primary', 'ntsp'),
+        'footer' => esc_html__('Footer', 'ntsp')
       )
     );
 
