@@ -1,0 +1,21 @@
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+@mixin media($media) {
+  @media screen and (#{$media}) {
+    @content;
+  }
+}
+
+@mixin retina-background-image($file, $type, $size) {
+  background-image: url($file + '.' + $type);
+  background-size: #{$size};
+  @media #{$retina} {
+    background-image: url($file + '@2x.' + $type);
+  }
+}

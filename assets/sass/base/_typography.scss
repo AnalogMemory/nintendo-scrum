@@ -1,0 +1,116 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  color: $base-font-color;
+  background-color: $base-background-color;
+  font-family: $base-font-family;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: $base-line-height;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, a, dd, dt, input, select, textarea, button, .button, figcaption {
+  -webkit-font-smoothing: $font-smoothing;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 300;
+  color: $header-font-color;
+  line-height: $heading-line-height;
+  margin: 0 0 1em;
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2em;
+
+  @include media($medium-screen-up) {
+    font-size: 2em;
+  }
+}
+h2 {
+  font-size: 1.675em;
+
+  @include media($medium-screen-up) {
+    font-size: 1.75em;
+  }
+}
+h3 {
+  font-size: 1.25em;
+
+  @include media($medium-screen-up) {
+    font-size: 1.5em;
+  }
+}
+h4 {
+  font-size: 1.125em;
+
+  @include media($medium-screen-up) {
+    font-size: 1.25em;
+  }
+}
+h5 {
+  font-size: 1.125em;
+}
+h6 {
+  font-size: 1em;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: $darkest-gray;
+}
+
+p {
+  margin: 0 0 $base-spacing;
+  font-size: 1em;
+}
+
+li {
+  margin: 0 0 0.375em;
+  font-size: 1em;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $action-hover-color;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+img, picture {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+}

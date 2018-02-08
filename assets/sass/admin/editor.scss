@@ -1,0 +1,127 @@
+@import "../base/variables";
+
+body {
+  font-family: $base-font-family;
+  font-size: 16px;
+  line-height: $base-line-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 400;
+  color: $black;
+  line-height: $heading-line-height;
+  margin: 0 0 $base-spacing;
+  letter-spacing: 0.0625em;
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 1.75em;
+}
+h3 {
+  font-size: 1.375em;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1.125em;
+}
+h6 {
+  font-size: 1em;
+}
+.title {
+  text-transform: uppercase;
+}
+.subtitle {
+  color: $darkest-gray;
+}
+p {
+  margin: 0 0 $base-spacing;
+  font-size: 1em;
+}
+li {
+  margin: 0 0 $small-spacing;
+  font-size: 1em;
+}
+b, strong {
+  font-weight: 700;
+}
+a {
+  color: $black;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: lighten($black, 40%);
+  }
+}
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+img, picture {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+
+  &.aligncenter {
+    margin: 0.25em auto;
+    display: block;
+  }
+}
+dl {
+  margin-bottom: $small-spacing;
+  dt {
+    font-weight: 700;
+    margin-top: $base-spacing;
+  }
+  dd {
+    margin: 0;
+  }
+}
+ul, ol {
+  margin: 0; padding: 0;
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+li {
+  margin-left: $base-spacing;
+  margin-bottom: $base-spacing;
+}
+button, .button {
+  appearance: none;
+  background-color: $black;
+  border: 0;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: ($base-font-size * 1.5);
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  line-height: 1;
+  padding: ($small-spacing * 1.5) $base-spacing;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: shade($black, 35%);
+  }
+}

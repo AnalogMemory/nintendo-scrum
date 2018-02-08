@@ -1,0 +1,54 @@
+.social {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0.25em;
+
+    a {
+      display: block;
+      width: 2em;
+      height: 2em;
+      position: relative;
+      overflow: hidden;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 1.8em;
+        height: 1.8em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        z-index: 1;
+        border-radius: 50%;
+      }
+
+      &:hover {
+        svg .fill {
+          fill: $action-hover-color;
+        }
+      }
+
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+
+        .fill {
+          fill: $action-color;
+          transition: fill $base-duration $base-timing;
+        }
+      }
+    }
+  }
+}

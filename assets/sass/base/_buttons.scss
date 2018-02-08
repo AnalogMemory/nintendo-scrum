@@ -1,0 +1,165 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+  appearance: none;
+  background-color: $action-color;
+  border: 0;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.125em;
+  padding: $small-spacing * 1.25;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  @include media($medium-screen-up) {
+    letter-spacing: 0.25em;
+    font-size: ($base-font-size * 1.25);
+    padding: ($small-spacing * 1.5) $base-spacing;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: rgba($action-color, 0.6);
+  }
+
+  &.disabled {
+    cursor: default;
+  }
+}
+
+
+.mobile-button {
+  @include media($small-screen) {
+    background-color: $dark-gray;
+    border: 0;
+    color: $action-color;
+    cursor: pointer;
+    display: inline-block;
+    font-size: ($base-font-size * 1.25);
+    margin: $small-spacing auto;
+    font-weight: normal;
+    line-height: 1;
+    padding: ($small-spacing * 1.25);
+    text-decoration: none;
+    transition: background-color $base-duration $base-timing;
+  }
+}
+
+$ani-button-width: 30px;
+$ani-button-height: 30px;
+$ani-bar-thickness: 3px;
+$ani-button-bar-space: 6px;
+$ani-button-color: $black;
+$ani-transistion-duration: 300ms;
+
+.ani-menu-icon {
+  display: block;
+  background: none !important;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: $ani-button-width;
+  height: $ani-button-height;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.85;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover, &focus, &:active {
+    background: none !important;
+    opacity: 1;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    top: ($ani-button-height / 2) - ($ani-bar-thickness / 2);
+    left: 0;
+    right: 0;
+    height: $ani-bar-thickness;
+    background: $ani-button-color;
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: $ani-bar-thickness;
+      background: $ani-button-color;
+      content: "";
+    }
+
+    &::before {
+      top: -$ani-bar-thickness - $ani-button-bar-space;
+    }
+
+    &::after {
+      bottom: -$ani-bar-thickness - $ani-button-bar-space;
+    }
+  }
+}
+
+.ani-menu-icon--x {
+  background: none;
+
+  span {
+    transition: background 0s $ani-transistion-duration;
+
+    &::before,
+    &::after {
+      transition-duration: $ani-transistion-duration, $ani-transistion-duration;
+      transition-delay: $ani-transistion-duration, 0s;
+    }
+
+    &::before {
+      transition-property: top, transform, background;
+    }
+
+    &::after {
+      transition-property: bottom, transform, background;
+    }
+  }
+
+  &.toggled {
+
+    span {
+      background: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+
+      &::before,
+      &::after {
+        background: $white;
+        transition-delay: 0s, $ani-transistion-duration;
+      }
+    }
+  }
+}

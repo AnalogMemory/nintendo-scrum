@@ -1,0 +1,55 @@
+.hidden-small {
+  @include media($small-screen) {
+    display: none !important;
+  }
+}
+
+.hidden-medium {
+  @include media($medium-screen-up) {
+    display: none !important;
+  }
+}
+
+.hidden-large {
+  @include media($large-screen-up) {
+    display: none !important;
+  }
+}
+
+.align-center {
+  text-align: center;
+}
+
+.spinner {
+  display: inline-block;
+  width: 70px;
+  text-align: center;
+  height: 12px;
+
+   > div {
+    width: 12px;
+    height: 12px;
+    background-color: $white;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: top;
+    animation: spin-bouncedelay 1.4s infinite ease-in-out both;
+  }
+
+  .bounce1 {
+    animation-delay: -0.32s;
+  }
+
+  .bounce2 {
+    animation-delay: -0.16s;
+  }
+}
+
+@keyframes spin-bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.0);
+  }
+}
