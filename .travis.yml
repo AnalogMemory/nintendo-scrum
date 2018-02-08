@@ -1,0 +1,29 @@
+language: node_js
+
+addons:
+  ssh_known_hosts:
+  - $STAGING_SERVER
+
+node_js: '8'
+
+cache: yarn
+
+install:
+  - yarn
+
+before_script:
+  - echo -e "Host $STAGING_SERVERntStrictHostKeyChecking non" >> ~/.ssh/config
+
+script:
+  - yarn build:production
+
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_287bab24a2e4_key -iv $encrypted_287bab24a2e4_iv -in deploy_key.enc -out deploy_key -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 /tmp/deploy_key
+  - ssh-add /tmp/deploy_key
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -rav -e ssh --exclude='.git/' --exclude=assets/ --exclude='.travis.yml' --delete-excluded ./ $STAGING_SERVER_USER@$STAGING_SERVER:$STAGING_SERVER_PATH
