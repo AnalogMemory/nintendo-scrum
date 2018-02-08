@@ -25,4 +25,4 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -rav -e ssh --exclude='.git/' --exclude=assets/ --exclude='.travis.yml' --delete-excluded ./ $STAGING_SERVER_USER@$STAGING_SERVER:$STAGING_SERVER_PATH
+  script: rsync -rav -e ssh --exclude='.git/' --exclude=assets/ --exclude=node_modules/ --exclude='yarn.lock' --exclude='deploy_key.enc' --exclude='.*' --delete-excluded ./ $STAGING_SERVER_USER@$STAGING_SERVER:$STAGING_SERVER_PATH
