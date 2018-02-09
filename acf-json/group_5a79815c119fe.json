@@ -3,6 +3,44 @@
     "title": "Mentor",
     "fields": [
         {
+            "key": "field_5a7ce595425e1",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a7ce5d7425e2",
+            "label": "Company",
+            "name": "company",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5a79816597b31",
             "label": "Description",
             "name": "description",
@@ -78,5 +116,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1517914014
+    "modified": 1518200987
 }
