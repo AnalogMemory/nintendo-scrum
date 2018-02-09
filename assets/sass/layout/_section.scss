@@ -3,11 +3,11 @@
 
   .copy {
     width: 100%;
-    padding: 1.5rem 0;
+    padding: 1.5em 0;
     text-align: left;
 
     @include media($medium-screen-up) {
-      padding: 3rem 0;
+      padding: 3em 0;
     }
 
     p {
@@ -20,6 +20,6 @@
 }
 
 .content-none {
-  padding: 12rem 0 10rem;
+  padding: 12em 0 10em;
   text-align: center;
 }

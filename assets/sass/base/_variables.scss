@@ -1,5 +1,5 @@
 // Typography
-$base-font-family: sans-serif;
+$base-font-family: 'Lato', sans-serif;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -14,24 +14,23 @@ $small-spacing: $base-spacing / 2;
 
 // Colors
 $white:            #ffffff;
-$black:            #000000;
-$darkest-gray:     #222222;
-$darker-gray:      #3e3e3e;
+$black:            #110103;
+$darker-gray:      #3B3C3C;
 $dark-gray:        #414042;
-$medium-gray:      #797979;
-$light-gray:       #999999;
+$medium-gray:      #888989;
+$light-gray:       #979797;
 $lighter-gray:     #cecece;
-$lightest-gray:    #f8f8f8;
-$red:              #e40b20;
+$lightest-gray:    #f6f6f6;
+$red:              #e60013;
 $alert:            #fff6bf;
 $error:            #f0523d;
 $notice:           #e5edf8;
 $success:          #e6efc2;
 
 // Font Colors
-$base-font-color: $darkest-gray;
-$header-font-color: $darkest-gray;
-$action-color: $darkest-gray;
+$base-font-color: $black;
+$header-font-color: $medium-gray;
+$action-color: $red;
 $action-hover-color: $medium-gray;
 
 // Font-smoothing
@@ -39,7 +38,7 @@ $font-smoothing: antialiased;
 
 // Border
 $base-border-radius: 3px;
-$base-border-color: $darkest-gray;
+$base-border-color: $darker-gray;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors

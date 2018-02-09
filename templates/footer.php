@@ -14,5 +14,7 @@
 
 <?php wp_footer(); ?>
 
+<?php get_template_part('templates/partial', 'google-webfonts'); ?>
+
 </body>
 </html>
