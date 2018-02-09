@@ -5,9 +5,12 @@
 
 <div class="content-block section-<?php echo get_row_layout(); ?>">
 
-  <figure class="background-image">
-    <img src="<?php echo $background_image['sizes']['large']; ?>" alt="" />
-  </figure>
+  <?php
+    if ($background_image) :
+      printf('<figure class="background-image" style="background-image: url(%s);"></figure>',
+        $background_image['sizes']['large']);
+    endif;
+  ?>
 
   <?php if ($hero_copy) : ?>
     <div class="copy">
