@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: rgba($light-gray, 0.9);
+  background-color: rgba($white, 0.8);
 
   .header-inner {
     display: flex;
@@ -16,7 +16,7 @@
     margin: 0;
     width: 100px;
     height: auto;
-    background-color: red;
+    background-color: $red;
   }
 }
 
@@ -25,12 +25,12 @@
     display: none;
   }
 
-  .menu {
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
+  ul.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
 
     li {
       list-style: none;
@@ -41,6 +41,11 @@
     a {
       display: block;
       padding: 1.75rem 2rem;
+    }
+
+    li.action-button a {
+      background: $red;
+      color: $white;
     }
   }
 }
