@@ -1,0 +1,23 @@
+.section-featured_mentors {
+  position: relative;
+
+  .content-inner {
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .featured-mentors {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 40%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
