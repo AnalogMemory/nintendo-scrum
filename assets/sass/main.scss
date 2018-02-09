@@ -5,6 +5,7 @@
 @import "base/base";
 
 // Theme Styles
-@import "header";
-@import "content";
-@import "footer";
+@import "layout/header";
+@import "layout/section";
+@import "layout/section-hero";
+@import "layout/footer";
