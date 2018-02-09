@@ -10,16 +10,21 @@ global $images;
 
 <?php if (have_rows('social_media', 'option')) : ?>
 
-  <div class="row center-xs">
-    <ul class="social col-xs">
-      <?php while (have_rows('social_media', 'option')) : the_row(); ?>
-        <li>
-          <a target="_blank" href="<?php the_sub_field('link'); ?>" title="<?php the_sub_field('type'); ?>">
-            <?php echo $images->inlineSvg('icon-' . strtolower(get_sub_field('type')) . '.svg'); ?>
-          </a>
-        </li>
-      <?php endwhile; ?>
-    </ul>
-  </div>
+  <ul class="social">
+
+    <?php
+      while (have_rows('social_media', 'option')) : the_row();
+
+        $link = get_sub_field('link');
+        $title = get_sub_field('type');
+        $svgIcon = $images->inlineSvg('icon-' . strtolower(get_sub_field('type')) . '.svg');
+
+        printf(__('<li><a href="%s" target="_blank" title="%s">%s</a></li>', 'ntsp'),
+          $link, $title, $svgIcon);
+
+      endwhile;
+    ?>
+
+  </ul>
 
 <?php endif; ?>
