@@ -1,29 +1,53 @@
 .section-hero {
-  height: 100vh;
-  overflow: hidden;
   position: relative;
+
+  @include media($medium-screen-up) {
+    height: 100vh;
+    overflow: hidden;
+  }
 
   .background-image {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
     margin: 0;
-    left: 0;
-    position: absolute;
-    top: 0;
     width: 100%;
     z-index: 1;
+    height: 40vh;
+
+    @include media($medium-screen-up) {
+      left: 0;
+      position: absolute;
+      top: 0;
+      height: 100%;
+    }
   }
 
   .copy {
     background-color: $white;
-    bottom: 0;
-    left: 0;
-    max-width: 42%;
-    position: absolute;
-    padding: 3em 4em;
+    max-width: 90%;
+    padding: 1.5em 2em;
     width: 100%;
-    z-index: 10;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-3.5rem);
+
+    @include media($medium-screen-up) {
+      bottom: 0;
+      left: 0;
+      max-width: 66%;
+      padding: 2.5em 5em;
+      position: absolute;
+      transform: none;
+      z-index: 10;
+    }
+
+    @include media($large-screen-up) {
+      max-width: 44%;
+    }
+
+    p {
+      color: $darker-gray;
+    }
   }
 }
