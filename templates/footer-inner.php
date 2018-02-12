@@ -1,10 +1,20 @@
+
 <div class="footer-inner">
 
   <div class="footer-col">
 
-    <a href="#">N+T Logo</a>
+    <?php
+      global $images;
+      $logoCropped = $images->imagePath('logo-nst-cropped.png');
+      if ($logoCropped) :
+        printf(__('<a href="%s" class="footer-logo" title="%s"><img src="%s" alt="" /></a>', 'ntsp'),
+          esc_url(get_home_url('/')),
+          esc_attr(get_bloginfo('name')),
+          esc_url($logoCropped));
+      endif;
+    ?>
 
-    <?php printf(__('<p id="copyright">%s</p>', 'ntsp'),
+    <?php printf(__('<p class="copyright">%s</p>', 'ntsp'),
       "© " . date('Y') . " " . get_field('copyright_text', 'option')); ?>
   </div>
 
