@@ -6,6 +6,7 @@
 ?>
 
 <div class="content-block section-<?php echo get_row_layout(); ?>">
+  <div class="content-inner">
 
   <?php
     if ($cta_image) :
@@ -26,13 +27,17 @@
         endif;
 
         if ($show_button) :
-          printf(__('<a href="%s" target="%s">%s</a>', 'ntsp'),
+          printf('<a href="%s" target="%s" class="button">%s</a>',
             $button_link['url'],
             $button_link['target'],
-            $button_link['title']);
+            $button_link['title']
+          );
         endif;
+
       ?>
+      <div class="gradient-bg"></div>
     </div>
   <?php endif; ?>
 
+  </div>
 </div>
