@@ -9,45 +9,28 @@
     margin: 0 0.25em;
 
     a {
-      display: block;
-      width: 2em;
-      height: 2em;
+      align-items: center;
+      background-color: $lightest-gray;
+      display: flex;
+      height: 2.75em;
+      justify-content: center;
       position: relative;
       overflow: hidden;
-
-      &:after {
-        content: '';
-        display: block;
-        width: 1.8em;
-        height: 1.8em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: transparent;
-        z-index: 1;
-        border-radius: 50%;
-      }
+      width: 2.75em;
 
       &:hover {
-        svg .fill {
-          fill: $action-hover-color;
+        svg {
+          fill: $action-color;
         }
       }
 
       svg {
         display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-
-        .fill {
-          fill: $action-color;
-          transition: fill $base-duration $base-timing;
-        }
+        width: 50%;
+        height: auto;
+        margin: auto;
+        fill: $darker-gray;
+        transition: fill $base-duration $base-timing;
       }
     }
   }
