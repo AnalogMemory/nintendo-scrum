@@ -1,10 +1,16 @@
 .section-timeline {
   position: relative;
 
+  .title-vertical {
+    width: 1.75em;
+    position: relative;
+    z-index: 2;
+    order: 1;
+  }
 
   .timeline {
-    width: 90%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 0 auto 0 0;
 
     li {
       list-style: none;
@@ -15,14 +21,20 @@
 
     .dates {
       width: 100%;
-      max-width: 30%;
-      flex-basis: 30%;
+      max-width: 44%;
+      flex-basis: 44%;
       padding: 2em 3em;
       border-right: 0.75em solid $red;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       span {
-        display: block;
-        font-size: 2em;
+        display: inline-block;
+        line-height: 1.1;
+        font-size: 3.75em;
+        font-weight: 700;
+        color: $medium-gray;
       }
     }
 
@@ -30,9 +42,21 @@
       width: 100%;
       max-width: 70%;
       flex-basis: 70%;
-      padding: 2em 3em;
+      padding: 3.5em 5em;
       background-color: $lightest-gray;
       border-bottom: 1px solid $lighter-gray;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .title-timeline {
+      font-size: 2em;
+
+      @include media($medium-screen-up) {
+        font-size: 3em;
+      }
     }
 
     li:last-child {

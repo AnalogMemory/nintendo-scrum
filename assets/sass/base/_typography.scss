@@ -138,11 +138,21 @@ img, picture {
     content: '';
     background-color: $medium-gray;
     display: block;
-    height: 100%;
+    height: 86%;
     left: 0.5em;
     position: absolute;
     top: 0;
     width: 1px;
     z-index: 1;
+  }
+
+  &.title-vertical-right {
+    span {
+      transform: rotate(90deg) translateY(-100%);
+    }
+
+    &:after {
+      left: 1em;
+    }
   }
 }
