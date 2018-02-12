@@ -40,29 +40,12 @@ input[type="submit"],
   }
 }
 
-
-.mobile-button {
-  @include media($small-screen) {
-    background-color: $dark-gray;
-    border: 0;
-    color: $action-color;
-    cursor: pointer;
-    display: inline-block;
-    font-size: ($base-font-size * 1.25);
-    margin: $small-spacing auto;
-    font-weight: normal;
-    line-height: 1;
-    padding: ($small-spacing * 1.25);
-    text-decoration: none;
-    transition: background-color $base-duration $base-timing;
-  }
-}
-
-$ani-button-width: 30px;
-$ani-button-height: 30px;
-$ani-bar-thickness: 3px;
-$ani-button-bar-space: 6px;
-$ani-button-color: $black;
+$ani-button-width: 26px;
+$ani-button-height: 26px;
+$ani-bar-thickness: 4px;
+$ani-button-bar-space: 7px;
+$ani-button-color: $red;
+$ani-button-hover-color: $black;
 $ani-transistion-duration: 300ms;
 
 .ani-menu-icon {
@@ -157,7 +140,7 @@ $ani-transistion-duration: 300ms;
 
       &::before,
       &::after {
-        background: $white;
+        background: $ani-button-hover-color;
         transition-delay: 0s, $ani-transistion-duration;
       }
     }

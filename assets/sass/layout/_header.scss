@@ -5,6 +5,7 @@
   left: 0;
   z-index: 100;
   background-color: rgba($white, 0.8);
+  box-shadow: 0 4px 30px 0 rgba($black, 0.24);
 
   .header-inner {
     display: flex;
@@ -14,38 +15,117 @@
   .logo {
     display: block;
     margin: 0;
-    width: 100px;
-    height: auto;
-    background-color: $red;
+    width: auto;
+    height: 3.5em;
+
+    @include media($medium-screen-up) {
+      height: 5.75em;
+    }
+
+    img {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
   }
 }
 
 .main-navigation {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  @include media($small-screen) {
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include media($medium-screen-up) {
+    height: 5.75em;
+    height: auto;
+    width: auto;
+    position: relative;
+  }
+
   > button {
-    display: none;
+    margin: auto 1em auto auto;
+    z-index: 10;
+    transition: margin $base-duration $base-timing;
+    pointer-events: auto;
+
+    @include media($medium-screen-up) {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   ul.menu {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex;
-    justify-content: flex-end;
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform $base-duration $base-timing;
+    will-change: transform;
+    background-color: rgba($white, 0.8);
+
+    @include media($medium-screen-up) {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      transition: none;
+      display: flex;
+      justify-content: flex-end;
+      width: auto;
+      height: 100%;
+      background: none;
+    }
+
+    &.active {
+      transform: translateX(0);
+    }
 
     li {
       list-style: none;
       margin: 0;
       padding: 0;
+      display: flex;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     a {
       display: block;
-      padding: 1.75em 2em;
+      padding: 1rem 2.5rem;
+      line-height: 1.5;
+      font-size: 1.5em;
+      color: $black;
+
+      &:hover {
+        color: $red;
+      }
     }
 
-    li.action-button a {
+    li.action-button {
       background: $red;
-      color: $white;
+
+      a {
+        color: $white;
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+      }
     }
   }
 }
