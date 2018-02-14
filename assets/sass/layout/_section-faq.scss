@@ -1,0 +1,25 @@
+.section-faq {
+  position: relative;
+
+  .faqs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      padding: 1em 0;
+
+      @include media($large-screen-up) {
+        padding: 2em 0;
+        max-width: 46%;
+        flex-basis: 46%;
+      }
+    }
+
+    .copy {
+      padding: 3em;
+      background-color: $lightest-gray;
+    }
+  }
+}
