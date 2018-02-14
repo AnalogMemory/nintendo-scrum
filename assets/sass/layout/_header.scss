@@ -114,16 +114,16 @@
       color: $black;
 
       &:hover {
-        color: $red;
+        color: $action-color;
       }
     }
 
     li.action-button {
-      background: $red;
+      background: $action-color;
       transition: background-color $base-duration $base-timing;
 
       &:hover {
-        background-color: darken($red, 6%);
+        background-color: rgba($action-color, 0.6);
       }
 
       a {
