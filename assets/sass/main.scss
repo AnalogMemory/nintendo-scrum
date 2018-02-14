@@ -6,6 +6,8 @@
 
 // Theme Styles
 @import "layout/header";
+@import "layout/footer";
+
 @import "layout/section";
 @import "layout/section-hero";
 @import "layout/section-about";
@@ -13,4 +15,5 @@
 @import "layout/section-timeline";
 @import "layout/section-cta";
 @import "layout/section-grid";
-@import "layout/footer";
+
+@import "layout/page-mentors";
