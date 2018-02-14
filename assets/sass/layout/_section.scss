@@ -3,11 +3,17 @@
 
   .content-inner {
     display: flex;
+    flex-direction: column;
     margin: 0 auto;
     width: 100%;
-    max-width: 90rem;
-    padding: 5em;
+    padding: 2em;
     position: relative;
+
+    @include media($medium-screen-up) {
+      max-width: 90rem;
+      padding: 5em;
+      flex-direction: row;
+    }
   }
 
   .copy {

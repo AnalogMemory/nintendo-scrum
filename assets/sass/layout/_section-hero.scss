@@ -27,10 +27,11 @@
     background-color: $white;
     max-width: 90%;
     padding: 1.5em 2em;
+    margin-bottom: -3.5em;
     width: 100%;
     position: relative;
     z-index: 2;
-    transform: translateY(-3.5rem);
+    transform: translateY(-3.5em);
 
     @include media($medium-screen-up) {
       bottom: 0;
@@ -40,6 +41,7 @@
       position: absolute;
       transform: none;
       z-index: 10;
+      margin: 0;
     }
 
     @include media($large-screen-up) {

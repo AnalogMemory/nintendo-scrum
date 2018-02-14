@@ -2,28 +2,38 @@
   position: relative;
 
   .title-vertical {
-    width: 1.75em;
-    position: relative;
-    z-index: 2;
+    @include media($medium-screen-up) {
+      width: 1.75em;
+      position: relative;
+      z-index: 2;
+    }
   }
 
   .featured-mentors {
-    width: 38%;
-    margin: 0 8% 0 2%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
     z-index: 2;
-    height: 100%;
+
+    @include media($medium-screen-up) {
+      width: 38%;
+      margin: 0 8% 0 2%;
+      height: 100%;
+      order: 0;
+    }
 
     li {
       width: 50%;
       height: auto;
       list-style: none;
       margin: 0;
-      padding: 0 2em 2em 0;
+      padding: 0 1em 1em 0;
       position: relative;
+
+      @include media($medium-screen-up) {
+        padding: 0 2em 2em 0;
+      }
 
       .inner-frame {
         width: 100%;
@@ -33,16 +43,18 @@
         overflow: hidden;
       }
 
-      &:nth-child(2) .inner-frame {
-        transform: translate(12%, 10%);
-      }
+      @include media($medium-screen-up) {
+        &:nth-child(2) .inner-frame {
+          transform: translate(12%, 10%);
+        }
 
-      &:nth-child(3) .inner-frame {
-        transform: translate(12%, 10%);
-      }
+        &:nth-child(3) .inner-frame {
+          transform: translate(12%, 10%);
+        }
 
-      &:nth-child(4) .inner-frame {
-        transform: translate(24%, 20%);
+        &:nth-child(4) .inner-frame {
+          transform: translate(24%, 20%);
+        }
       }
 
       .details {
@@ -99,23 +111,31 @@
 
   .copy {
     display: block;
-    width: 48%;
-    padding-left: 0;
-    padding-right: 4rem;
     position: relative;
     z-index: 1;
-    height: 100%;
+    order: -1;
+    padding-top: 0;
+    
+    @include media($medium-screen-up) {
+      width: 48%;
+      height: 100%;
+      padding-left: 0;
+      padding-right: 4rem;
+      order: initial;
+    }
   }
 
   .gradient-bg {
-    background: linear-gradient(to bottom, #F9F9F9, #E7E7E7);
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 190%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.3;
+    @include media($medium-screen-up) {
+      background: linear-gradient(to bottom, #F9F9F9, #E7E7E7);
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 190%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.3;
+    }
   }
 }

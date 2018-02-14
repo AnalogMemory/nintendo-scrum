@@ -2,32 +2,52 @@
   position: relative;
 
   .title-vertical {
-    width: 1.75em;
-    position: relative;
-    z-index: 2;
-    order: 1;
+    @include media($medium-screen-up) {
+      width: 1.75em;
+      position: relative;
+      z-index: 2;
+      order: 1;
+    }
   }
 
   .timeline {
-    width: 95%;
-    margin: 0 auto 0 0;
+    margin: 0;
+    width: 100%;
+    
+    @include media($medium-screen-up) {
+      width: 95%;
+      margin: 0 auto 0 0;
+    }
 
     li {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
+      flex-direction: column;
+      border-left: 0.75em solid $red;
+      background-color: $lightest-gray;
+
+      @include media($medium-screen-up) {
+        flex-direction: row;
+        border: none;
+        background: none;
+      }
     }
 
     .dates {
       width: 100%;
-      max-width: 34%;
-      flex-basis: 34%;
-      padding: 2em 3em 2em 0;
-      border-right: 0.75em solid $red;
+      padding: 1em;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      @include media($medium-screen-up) {
+        border-right: 0.75em solid $red;
+        max-width: 34%;
+        flex-basis: 34%;
+        padding: 2em 3em 2em 0;  
+      }
 
       span {
         display: inline-block;
@@ -40,11 +60,15 @@
 
     .info {
       width: 100%;
-      max-width: 75%;
-      flex-basis: 75%;
-      padding: 3.5em 5em;
-      background-color: $lightest-gray;
+      padding: 1em;
       border-bottom: 1px solid $lighter-gray;
+      
+      @include media($medium-screen-up) {
+        background-color: $lightest-gray;
+        max-width: 75%;
+        flex-basis: 75%;
+        padding: 3.5em 5em;
+      }
 
       p:last-child {
         margin-bottom: 0;

@@ -2,13 +2,16 @@
   position: relative;
 
   .image {
-    width: 44%;
-    margin: 0 8% 0 0;
     z-index: 2;
-    transform: translate(1rem, 3rem);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
+    @include media($medium-screen-up) {
+      width: 44%;
+      margin: 0 8% 0 0;
+      transform: translate(1rem, 3rem);
+    }
   }
 
   .copy {
@@ -16,12 +19,15 @@
     background-repeat: no-repeat;
     background-position: center;
     display: block;
-    width: 48%;
-    padding-left: 0;
-    padding-right: 4rem;
     position: relative;
     z-index: 1;
     height: 100%;
+    
+    @include media($medium-screen-up) {
+      padding-left: 0;
+      padding-right: 4rem;
+      width: 48%;
+    }
   }
 
   .gradient-bg {
