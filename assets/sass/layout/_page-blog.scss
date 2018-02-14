@@ -19,6 +19,11 @@
       margin: 0;
       padding: 0;
 
+      .featured-image {
+        height: 66vh;
+        padding-bottom: 0;
+      }
+
       .copy {
         background-color: $white;
 

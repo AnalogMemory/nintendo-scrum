@@ -2,7 +2,7 @@
   position: relative;
 
   @include media($medium-screen-up) {
-    height: 100vh;
+    height: 66vh;
     overflow: hidden;
   }
 
@@ -49,5 +49,11 @@
     p {
       color: $darker-gray;
     }
+  }
+}
+
+body.home .section-hero {
+  @include media($medium-screen-up) {
+    height: 100vh;
   }
 }
