@@ -21,9 +21,9 @@
 
     .dates {
       width: 100%;
-      max-width: 44%;
-      flex-basis: 44%;
-      padding: 2em 3em;
+      max-width: 34%;
+      flex-basis: 34%;
+      padding: 2em 3em 2em 0;
       border-right: 0.75em solid $red;
       display: flex;
       flex-direction: column;
@@ -34,14 +34,14 @@
         line-height: 1.1;
         font-size: 3.75em;
         font-weight: 700;
-        color: $medium-gray;
+        color: $lighter-gray;
       }
     }
 
     .info {
       width: 100%;
-      max-width: 70%;
-      flex-basis: 70%;
+      max-width: 75%;
+      flex-basis: 75%;
       padding: 3.5em 5em;
       background-color: $lightest-gray;
       border-bottom: 1px solid $lighter-gray;
