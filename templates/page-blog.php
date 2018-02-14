@@ -23,7 +23,7 @@
         printf('<article class="post">%s%s</a></article>',
           sprintf('<figure class="featured-image" style="background-image: url(%s);"></figure>', 
             $featured_image['sizes']['large']),
-          sprintf('<a href="%s"><div class="copy"><h2 class="title">%s</h2><h4>%s</h4></div></a>', 
+          sprintf('<a href="%s"><div class="copy"><h2 class="title">%s</h2><p>%s</p></div></a>', 
             get_the_permalink(),
             $title,
             $description)
