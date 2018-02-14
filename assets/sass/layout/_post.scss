@@ -1,0 +1,26 @@
+.content-post {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  .featured-image {
+    width: 100%;
+    margin: 0;
+    height: 62vh;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .copy {
+    padding: 0 2em;
+    width: 67%;
+    position: relative;
+    margin: 0 auto;
+    z-index: 2;
+  }
+}
