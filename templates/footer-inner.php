@@ -5,12 +5,14 @@
 
     <?php
       global $images;
-      $logoCropped = $images->imagePath('logo-nst-cropped.png');
-      if ($logoCropped) :
-        printf(__('<a href="%s" class="footer-logo" title="%s"><img src="%s" alt="" /></a>', 'ntsp'),
+      $logoWide = $images->inlineSvg('logo-nst-wide.svg');
+
+      if ($logoWide) :
+        printf('<a href="%s" class="footer-logo" title="%s">%s</a>',
           esc_url(get_home_url('/')),
           esc_attr(get_bloginfo('name')),
-          esc_url($logoCropped));
+          $logoWide
+        );
       endif;
     ?>
 

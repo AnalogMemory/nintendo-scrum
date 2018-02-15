@@ -12,12 +12,13 @@ global $images;
   <div class="header-inner">
     <figure class="logo">
       <?php
-        $logo = $images->imagePath('logo-nst.png');
+        $logo = $images->inlineSvg('logo-nst-square.svg');
         if ($logo) :
-          printf(__('<a href="%s" rel="home" title="%s"><img src="%s" alt="" /></a>', 'ntsp'),
+          printf(__('<a href="%s" rel="home" title="%s">%s</a>', 'ntsp'),
             esc_url(get_home_url('/')),
             esc_attr(get_bloginfo('name')),
-            esc_url($logo));
+            $logo
+          );
         endif;
       ?>
     </figure>
