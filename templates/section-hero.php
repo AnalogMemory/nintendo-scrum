@@ -7,7 +7,7 @@
 
   <?php
     if ($background_image) :
-      printf('<figure class="background-image" style="background-image: url(%s);"></figure>',
+      printf('<figure class="background-image"><img src="%s" class="rellax" alt="" /></figure>',
         $background_image['sizes']['large']);
     endif;
   ?>
