@@ -39,7 +39,7 @@
 
   <?php
     if ($about_image) :
-      printf('<figure class="image" style="background-image: url(%s);"></figure>',
+      printf('<div class="image"><figure><img src="%s" alt="" /></figure></div>',
         $about_image['sizes']['medium']);
     endif;
   ?>

@@ -10,7 +10,7 @@
 
   <?php
     if ($cta_image) :
-      printf(__('<figure class="image" style="background-image: url(%s);"></figure>', 'ntsp'),
+      printf('<div class="image"><figure><img src="%s" alt="" /></figure></div>',
         $cta_image['sizes']['medium']);
     endif;
   ?>
