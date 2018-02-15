@@ -20,18 +20,22 @@
         $title = get_the_title();
         $description = get_field('description');
         $featured_image = get_field('featured_image');
+        $parallaxClass = $count == 0 ? 'rellax' : '';
         
         printf('<article class="post">%s%s</a></article>',
+          // Featured Image
           sprintf('<figure class="featured-image"><img src="%s" class="%s" alt="" /></figure>', 
             $featured_image['sizes']['large'],
-            $rellax = $count == 0 ? 'rellax' : ''
+            $parallaxClass
           ),
-          sprintf('<a href="%s"><div class="copy"><h2 class="title">%s</h2><p>%s</p></div></a>', 
+          // Copy Block
+          sprintf('<a href="%s"><div class="copy"><h4 class="title">%s</h4><p>%s</p></div></a>', 
             get_the_permalink(),
             $title,
             $description
           )
         );
+        
         $count++;
         
       endwhile;
