@@ -10,11 +10,16 @@
     flex-wrap: wrap;
 
     li {
-      width: 25%;
+      width: 100%;
       list-style: none;
       margin: 0;
-      padding: 0 2em 2em;
+      padding: 0 0 2em;
       position: relative;
+      
+      @include media($medium-screen-up) {
+        width: 25%;
+        padding: 0 2em 2em;
+      }
     }
 
     .photo {
