@@ -1,5 +1,6 @@
 # Project Dependencies
 node_modules
+.vscode
 
 # Asset Directory
 public
