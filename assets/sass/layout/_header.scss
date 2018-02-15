@@ -17,6 +17,8 @@
     margin: 0;
     width: auto;
     height: 3.5em;
+    position: relative;
+    z-index: 10;
 
     @include media($medium-screen-up) {
       height: 5.75em;
