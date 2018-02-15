@@ -5,12 +5,16 @@
   flex-wrap: wrap;
 
   .post {
-    max-width: 46%;
     width: 100%;
     display: block;
-    flex-basis: 46%;
     position: relative;
-    margin: 4em 2%;
+    margin: 1.5em 0 0;
+    
+    @include media($medium-screen-up) {
+      flex-basis: 46%;
+      max-width: 46%;
+      margin: 4em 2%;
+    }
 
     &:first-child {
       width: 100%;
@@ -22,9 +26,6 @@
       .featured-image {
         height: 44vh;
         padding-bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
   
         @include media($medium-screen-up) {
           height: 66vh;
@@ -75,7 +76,7 @@
 
     .copy {
       background-color: rgba($white, 0.8);
-      padding: 1em;
+      padding: 1em 1.5em;
       width: 100%;
       position: relative;
       margin: 0;
