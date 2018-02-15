@@ -12,7 +12,7 @@
   <?php 
     $featured_image = get_field('featured_image');  
     if ($featured_image) :  
-      printf('<figure class="featured-image" style="background-image: url(%s);"></figure>', 
+      printf('<figure class="featured-image"><img src="%s" class="rellax" alt="" /></figure>', 
         $featured_image['sizes']['large']
       );
     endif;
