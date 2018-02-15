@@ -18,8 +18,12 @@
     }
 
     .copy {
-      padding: 3em;
+      padding: 1.5em;
       background-color: $lightest-gray;
+      
+      @include media($medium-screen-up) {
+        padding: 3em;
+      }
     }
   }
 }
