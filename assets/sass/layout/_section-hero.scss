@@ -1,9 +1,9 @@
 .section-hero {
   position: relative;
+  overflow: hidden;
 
   @include media($medium-screen-up) {
     height: 66vh;
-    overflow: hidden;
   }
 
   .background-image {
