@@ -7,7 +7,7 @@
 
   <?php
     if ($background_image) :
-      printf('<figure class="background-image"><img src="%s" class="rellax" alt="" /></figure>',
+      printf('<figure class="background-image"><img src="%s" class="rellax object-fit-cover" alt="" /></figure>',
         $background_image['sizes']['large']);
     endif;
   ?>

@@ -10,7 +10,7 @@
 
   <?php
     if ($cta_image) :
-      printf('<div class="image"><figure><img src="%s" alt="" /></figure></div>',
+      printf('<div class="image"><figure><img src="%s" class="object-fit-cover" alt="" /></figure></div>',
         $cta_image['sizes']['medium']);
     endif;
   ?>

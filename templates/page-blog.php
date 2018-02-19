@@ -20,7 +20,7 @@
         $title = get_the_title();
         $description = get_field('description');
         $featured_image = get_field('featured_image');
-        $parallaxClass = $count == 0 ? 'rellax' : '';
+        $parallaxClass = $count == 0 ? 'rellax object-fit-cover' : '';
         
         printf('<article class="post">%s%s</a></article>',
           // Featured Image
