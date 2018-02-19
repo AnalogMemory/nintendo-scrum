@@ -12,9 +12,7 @@
     z-index: 1;
     height: 44vh;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
 
     @include media($medium-screen-up) {
       height: 100vh;
@@ -26,6 +24,7 @@
       height: 100%;
       object-fit: cover;
       max-width: none;
+      display: block;
     }
   }
 
