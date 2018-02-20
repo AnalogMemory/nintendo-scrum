@@ -42,7 +42,7 @@ $ani-button-height: 26px;
 $ani-bar-thickness: 4px;
 $ani-button-bar-space: 7px;
 $ani-button-color: $red;
-$ani-button-hover-color: $black;
+$ani-button-active-color: $red;
 $ani-transistion-duration: 300ms;
 
 .ani-menu-icon {
@@ -137,7 +137,7 @@ $ani-transistion-duration: 300ms;
 
       &::before,
       &::after {
-        background: $ani-button-hover-color;
+        background: $ani-button-active-color;
         transition-delay: 0s, $ani-transistion-duration;
       }
     }

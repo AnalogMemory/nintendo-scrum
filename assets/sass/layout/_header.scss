@@ -77,9 +77,9 @@
     left: 0;
     width: 100%;
     transform: translateX(-100%);
-    transition: transform $base-duration $base-timing;
+    transition: transform 200ms ease;
     will-change: transform;
-    background-color: rgba($white, 0.8);
+    background-color: rgba($white, 1);
 
     @include media($medium-screen-up) {
       position: relative;
