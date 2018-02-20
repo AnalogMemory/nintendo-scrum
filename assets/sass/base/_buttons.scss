@@ -37,10 +37,11 @@ input[type="submit"],
   }
 }
 
-$ani-button-width: 26px;
-$ani-button-height: 26px;
+$ani-button-width: 56px;
+$ani-button-height: 56px;
 $ani-bar-thickness: 4px;
 $ani-button-bar-space: 7px;
+$ani-button-padding: 15px;
 $ani-button-color: $red;
 $ani-button-active-color: $red;
 $ani-transistion-duration: 300ms;
@@ -50,7 +51,7 @@ $ani-transistion-duration: 300ms;
   background: none !important;
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: $ani-button-padding;
   width: $ani-button-width;
   height: $ani-button-height;
   box-shadow: none;
@@ -73,8 +74,8 @@ $ani-transistion-duration: 300ms;
     display: block;
     position: absolute;
     top: ($ani-button-height / 2) - ($ani-bar-thickness / 2);
-    left: 0;
-    right: 0;
+    left:  $ani-button-padding;
+    right: $ani-button-padding;
     height: $ani-bar-thickness;
     background: $ani-button-color;
 
