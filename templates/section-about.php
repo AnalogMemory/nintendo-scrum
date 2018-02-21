@@ -39,7 +39,7 @@
 
   <?php
     if ($about_image) :
-      printf('<div class="image"><figure><img src="%s" class="object-fit-cover" alt="" /></figure></div>',
+      printf('<div class="image" data-scroll><figure><img src="%s" class="object-fit-cover" alt="" /></figure></div>',
         $about_image['sizes']['medium']);
     endif;
   ?>

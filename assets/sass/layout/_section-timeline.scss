@@ -13,7 +13,7 @@
   .timeline {
     margin: 0;
     width: 100%;
-    
+
     @include media($medium-screen-up) {
       width: 95%;
       margin: 0 auto 0 0;
@@ -33,20 +33,37 @@
         border: none;
         background: none;
       }
+
+      &.visible {
+        .dates {
+          @include media($medium-screen-up) {
+            border-right: 0.75em solid $red;
+          }
+        }
+      }
+
+      &.invisible {
+        .dates {
+          @include media($medium-screen-up) {
+            border-right: 0.75em solid $lightest-gray;
+          }
+        }
+      }
     }
 
     .dates {
       width: 100%;
       padding: 2em 1em 0em;
-      
+
       @include media($medium-screen-up) {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-right: 0.75em solid $red;
+        border-right: 0.75em solid $lightest-gray;
         max-width: 34%;
         flex-basis: 34%;
-        padding: 2em 3em 2em 0;  
+        padding: 2em 3em 2em 0;
+        transition: border-color 500ms $base-timing;
       }
 
       span {
@@ -55,7 +72,7 @@
         font-size: 1.75em;
         font-weight: 700;
         color: $lighter-gray;
-        
+
         @include media($medium-screen-up) {
           font-size: 2.75em;
         }
@@ -66,7 +83,7 @@
       width: 100%;
       padding: 1em;
       border-bottom: 1px solid $lighter-gray;
-      
+
       @include media($medium-screen-up) {
         background-color: $lightest-gray;
         max-width: 75%;

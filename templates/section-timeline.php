@@ -21,7 +21,7 @@
           $start_date = get_sub_field('start_date');
           $end_date = get_sub_field('end_date');
         ?>
-        <li>
+        <li data-scroll="addHeight">
 
           <div class="dates">
             <?php

@@ -11,7 +11,7 @@
     position: relative;
     width: 100%;
     justify-content: center;
-    
+
     @include media($medium-screen-up) {
       max-width: 90rem;
       flex-direction: row;
@@ -37,7 +37,7 @@
     width: 100%;
     max-width: 234px;
     margin: 0 auto $base-spacing;
-    
+
     @include media($medium-screen-up) {
       margin: 0 0 $small-spacing;
     }

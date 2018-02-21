@@ -7,11 +7,29 @@
     background-position: center;
     background-size: cover;
     margin: 0;
-    
+
     @include media($medium-screen-up) {
       width: 44%;
       margin: 0 8% 0 0;
       transform: translate(1rem, 3rem);
+    }
+
+    &.visible {
+      figure {
+        @include media($medium-screen-up) {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+    }
+
+    &.invisible {
+      figure {
+        @include media($medium-screen-up) {
+          transform: translateX(-25%);
+          opacity: 0;
+        }
+      }
     }
 
     figure {
@@ -24,6 +42,7 @@
       @include media($medium-screen-up) {
         height: 100%;
         padding-bottom: 0;
+        transition: transform 500ms $base-timing, opacity 500ms $base-timing;
       }
     }
 
@@ -43,7 +62,7 @@
     position: relative;
     z-index: 1;
     height: 100%;
-    
+
     @include media($medium-screen-up) {
       padding-left: 0;
       padding-right: 4rem;
