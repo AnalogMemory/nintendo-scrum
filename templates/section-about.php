@@ -9,6 +9,13 @@
 <div class="content-block section-<?php echo get_row_layout(); ?>">
   <div class="content-inner">
 
+  <?php
+    if ($about_image) :
+      printf('<div class="image" data-scroll><figure><img src="%s" class="object-fit-cover" alt="" /></figure></div>',
+        $about_image['sizes']['medium']);
+    endif;
+  ?>
+
   <?php if ($about_copy) : ?>
     <div class="copy">
       <?php
@@ -36,13 +43,6 @@
       <div class="gradient-bg"></div>
     </div>
   <?php endif; ?>
-
-  <?php
-    if ($about_image) :
-      printf('<div class="image" data-scroll><figure><img src="%s" class="object-fit-cover" alt="" /></figure></div>',
-        $about_image['sizes']['medium']);
-    endif;
-  ?>
 
   </div>
 </div>

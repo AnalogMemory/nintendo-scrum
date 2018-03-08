@@ -115,13 +115,19 @@
     z-index: 1;
     order: -1;
     padding-top: 0;
-    
+
     @include media($medium-screen-up) {
       width: 48%;
       height: 100%;
       padding-left: 0;
       padding-right: 4rem;
       order: initial;
+    }
+
+    .featured-logo {
+      margin: 0 0 1.5rem;
+      width: 100%;
+      max-width: 30%;
     }
   }
 

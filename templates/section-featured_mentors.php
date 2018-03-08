@@ -2,6 +2,7 @@
   $featured_mentors_copy = get_sub_field('featured_mentors_copy');
   $show_button = get_sub_field('show_button');
   $button_link = get_sub_field('link');
+  $featured_logo = get_sub_field('logo');
 ?>
 
 <div class="content-block section-<?php echo get_row_layout(); ?>">
@@ -53,6 +54,11 @@
 
       if ($featured_mentors_copy) :
         echo '<div class="copy">';
+
+        if ($featured_logo) :
+          printf('<figure class="featured-logo"><img src="%s" alt="" /></figure>',
+            $featured_logo['sizes']['medium']);
+        endif;
 
         if ($featured_mentors_copy['title']) :
           printf(__('<h2 class="title-featured">%s</h2>', 'ntsp'), $featured_mentors_copy['title']);
