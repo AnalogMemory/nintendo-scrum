@@ -18,7 +18,7 @@
 
     @include media($medium-screen-up) {
       width: 38%;
-      margin: 0 8% 0 2%;
+      margin: 0 6% 0 5%;
       height: 100%;
       order: 0;
     }
@@ -28,11 +28,11 @@
       height: auto;
       list-style: none;
       margin: 0;
-      padding: 0 1em 1em 0;
+      padding: 0 0 1em 1em;
       position: relative;
 
       @include media($medium-screen-up) {
-        padding: 0 2em 2em 0;
+        padding: 0 0 2em 2em;
       }
 
       .inner-frame {
@@ -113,14 +113,13 @@
     display: block;
     position: relative;
     z-index: 1;
-    order: -1;
     padding-top: 0;
 
     @include media($medium-screen-up) {
       width: 48%;
       height: 100%;
-      padding-left: 0;
-      padding-right: 4rem;
+      padding-left: 4rem;
+      padding-right: 0;
       order: initial;
     }
 
@@ -135,7 +134,7 @@
     @include media($medium-screen-up) {
       background: linear-gradient(to bottom, #F9F9F9, #E7E7E7);
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0;
       bottom: 0;
       width: 190%;

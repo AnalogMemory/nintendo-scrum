@@ -9,8 +9,32 @@
   <div class="content-inner">
 
     <?php
-      if ($featured_mentors_copy['vertical_title']) :
-        printf(__('<h2 class="title-vertical"><span>%s</span></h2>', 'ntsp'), $featured_mentors_copy['vertical_title']);
+      if ($featured_mentors_copy) :
+        echo '<div class="copy">';
+
+        if ($featured_logo) :
+          printf('<figure class="featured-logo"><img src="%s" alt="" /></figure>',
+            $featured_logo['sizes']['medium']);
+        endif;
+
+        if ($featured_mentors_copy['title']) :
+          printf(__('<h2 class="title-featured">%s</h2>', 'ntsp'), $featured_mentors_copy['title']);
+        endif;
+
+        if ($featured_mentors_copy['copy']) :
+          printf(__('<p>%s</p>', 'ntsp'), $featured_mentors_copy['copy']);
+        endif;
+
+        if ($show_button) :
+          printf('<a href="%s" target="%s" class="link">%s</a>',
+            $button_link['url'],
+            $button_link['target'],
+            $button_link['title']
+          );
+        endif;
+
+      echo '<div class="gradient-bg"></div>';
+      echo '</div>';
       endif;
 
       $mentor_ids = [];
@@ -52,32 +76,8 @@
 
       endif;
 
-      if ($featured_mentors_copy) :
-        echo '<div class="copy">';
-
-        if ($featured_logo) :
-          printf('<figure class="featured-logo"><img src="%s" alt="" /></figure>',
-            $featured_logo['sizes']['medium']);
-        endif;
-
-        if ($featured_mentors_copy['title']) :
-          printf(__('<h2 class="title-featured">%s</h2>', 'ntsp'), $featured_mentors_copy['title']);
-        endif;
-
-        if ($featured_mentors_copy['copy']) :
-          printf(__('<p>%s</p>', 'ntsp'), $featured_mentors_copy['copy']);
-        endif;
-
-        if ($show_button) :
-          printf('<a href="%s" target="%s" class="link">%s</a>',
-            $button_link['url'],
-            $button_link['target'],
-            $button_link['title']
-          );
-        endif;
-
-      echo '<div class="gradient-bg"></div>';
-      echo '</div>';
+      if ($featured_mentors_copy['vertical_title']) :
+        printf(__('<h2 class="title-vertical"><span>%s</span></h2>', 'ntsp'), $featured_mentors_copy['vertical_title']);
       endif;
     ?>
 
