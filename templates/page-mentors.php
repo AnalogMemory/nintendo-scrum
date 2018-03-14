@@ -12,9 +12,12 @@
 
 <div class="content-block section-mentors">
   <div class="content-inner">
-    
+
     <?php
-      $mentor_args = array('post_type' => 'mentor');
+      $mentor_args = array(
+        'post_type' => 'mentor',
+        'posts_per_page' => -1
+      );
       $mentors = new WP_Query($mentor_args);
 
       if ($mentors->have_posts()) :
@@ -34,7 +37,7 @@
               printf('<figure class="photo"><img src="%s" alt="" /></figure>',
                 $photo['sizes']['medium']
               );
-              
+
               printf('<div class="details">%s%s%s</div>',
                 sprintf('<h3>%s</h3>', $name),
                 sprintf('<h4>%s%s</h4>', $title, $company),
