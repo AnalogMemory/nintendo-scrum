@@ -67,6 +67,25 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": "jpg, jpeg"
+                        },
+                        {
+                            "key": "field_5abd75a7dd066",
+                            "label": "Image Effects",
+                            "name": "image_effects",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Grayscale + Gradient",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         }
                     ],
                     "min": "",
@@ -124,6 +143,49 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": "jpeg, jpg, png"
+                        },
+                        {
+                            "key": "field_5abd75de392ad",
+                            "label": "Image Effects",
+                            "name": "image_effects",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Grayscale + Gradient",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5abd7609392ae",
+                            "label": "Image Fill",
+                            "name": "image_fill",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "contain": "Fit Frame",
+                                "cover": "Fill Frame"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "cover",
+                            "layout": "horizontal",
+                            "return_format": "value"
                         },
                         {
                             "key": "field_5a837966030de",
@@ -225,6 +287,49 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_5abd76c19e39f",
+                            "label": "Image Effects",
+                            "name": "image_effects",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Grayscale + Gradient",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5abd76dd9e3a0",
+                            "label": "Image Fill",
+                            "name": "image_fill",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "contain": "Fit Frame",
+                                "cover": "Fill Frame"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "cover",
+                            "layout": "horizontal",
+                            "return_format": "value"
                         },
                         {
                             "key": "field_58f6b9de64282",
@@ -763,5 +868,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1520550568
+    "modified": 1522366930
 }

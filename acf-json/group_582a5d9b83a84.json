@@ -38,7 +38,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "80",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -62,5 +62,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1517878157
+    "modified": 1522366248
 }
