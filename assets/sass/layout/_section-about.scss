@@ -39,6 +39,7 @@
       margin: 0;
       padding-bottom: 56.25%;
       position: relative;
+      background-color: $white;
 
       @include media($medium-screen-up) {
         height: 100%;

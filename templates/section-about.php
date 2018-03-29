@@ -2,6 +2,8 @@
   $about_copy = get_sub_field('text');
   $about_image = get_sub_field('image');
   $about_logo = get_sub_field('logo');
+  $image_effects = get_sub_field('image_effects');
+  $image_fill = get_sub_field('image_fill');
   $show_button = get_sub_field('show_button');
   $button_link = get_sub_field('link');
 ?>
@@ -11,8 +13,10 @@
 
   <?php
     if ($about_image) :
-      printf('<div class="image" data-scroll><figure><img src="%s" class="object-fit-cover" alt="" /></figure></div>',
-        $about_image['sizes']['medium']);
+      printf('<div class="image" data-scroll><figure><img src="%s" class="%s" alt="" /></figure></div>',
+        $about_image['sizes']['medium'],
+        'object-fit-' . $image_fill
+      );
     endif;
   ?>
 
@@ -21,7 +25,8 @@
       <?php
         if ($about_logo) :
           printf('<figure class="about-logo"><img src="%s" alt="" /></figure>',
-            $about_logo['sizes']['medium']);
+            $about_logo['sizes']['medium']
+          );
         endif;
 
         if ($about_copy['title']) :

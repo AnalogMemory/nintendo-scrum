@@ -1,6 +1,8 @@
 <?php
   $cta_copy = get_sub_field('cta_copy');
   $cta_image = get_sub_field('cta_image');
+  $image_effects = get_sub_field('image_effects');
+  $image_fill = get_sub_field('image_fill');
   $show_button = get_sub_field('show_button');
   $button_link = get_sub_field('link');
 ?>
@@ -10,8 +12,10 @@
 
   <?php
     if ($cta_image) :
-      printf('<div class="image" data-scroll><figure><img src="%s" class="object-fit-cover" alt="" /></figure></div>',
-        $cta_image['sizes']['medium']);
+      printf('<div class="image" data-scroll><figure><img src="%s" class="%s" alt="" /></figure></div>',
+        $cta_image['sizes']['medium'],
+        'object-fit-' . $image_fill
+      );
     endif;
   ?>
 
