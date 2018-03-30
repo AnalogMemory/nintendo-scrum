@@ -1,5 +1,7 @@
 .section-about {
   position: relative;
+  width: 100%;
+  overflow: hidden;
 
   .image {
     display: block;
@@ -93,9 +95,14 @@
     }
 
     .about-logo {
-      margin: 0 0 1.5rem;
       width: 100%;
       max-width: 30%;
+      margin: -100px 0 1rem;
+      background: white;
+
+      @include media($medium-screen-up) {
+        margin: -2rem 0 0 -0.75rem;
+      }
     }
 
     h2 {
