@@ -66,6 +66,7 @@
         font-size: 1.75em;
         font-weight: 700;
         color: $lighter-gray;
+        font-family: $header-font-family;
 
         @include media($medium-screen-up) {
           font-size: 3.5em;

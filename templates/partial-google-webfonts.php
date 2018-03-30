@@ -1,6 +1,6 @@
 <script type="text/javascript">
   WebFontConfig = {
-    google: { families: [ 'Lato:300,400,700' ] }
+    google: { families: [ 'Lato:300,700', 'Roboto:400' ] }
   };
   (function() {
     var wf = document.createElement('script');
