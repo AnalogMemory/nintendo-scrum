@@ -1,23 +1,29 @@
 .footer {
   display: flex;
   justify-content: center;
+  padding: 0.5em 1.5em 1.5em;
+
+  @include media($medium-screen-up) {
+    padding: 4em 5em 1em;
+  }
 
   .footer-inner {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    margin: 0.5em 1.5em 1.5em;
     padding: 1.5em 0 0;
     position: relative;
     width: 100%;
+    height: 100%;
     justify-content: center;
+
 
     @include media($medium-screen-up) {
       max-width: 90rem;
       flex-direction: row;
-      margin: 4em 5em 1em;
-      padding: 3em 0 0;
+      flex-wrap: nowrap;
+      align-items: flex-start;
       justify-content: space-between;
+      padding: 3em 0 0;
     }
 
     &:before {
@@ -32,18 +38,36 @@
     }
   }
 
+  .footer-col {
+    display: block;
+  }
+
   .footer-logo {
     display: block;
     width: 100%;
     max-width: 234px;
-    margin: 0 auto $base-spacing;
+    margin: 0 auto $base-spacing 0;
 
     @include media($medium-screen-up) {
-      margin: 0 0 $small-spacing;
+      margin: 0 auto $small-spacing 0;
+      width: 234px;
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 16.05%;
+      position: relative;
     }
 
     svg, img {
       display: block;
+      width: 100%;
+      height: auto;
+
+      @include media($medium-screen-up) {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%)
+      }
     }
   }
 
