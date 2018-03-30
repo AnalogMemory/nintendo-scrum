@@ -21,13 +21,20 @@
     z-index: 10;
 
     @include media($medium-screen-up) {
-      height: 5.75em;
+      height: 92px;
+      max-width: 242px;
+      width: 100%;
     }
 
     svg, img {
       display: block;
       height: 100%;
       width: auto;
+      @include media($medium-screen-up) {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
     }
   }
 }
