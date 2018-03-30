@@ -25,7 +25,7 @@
 
           <div class="dates">
             <?php
-              $separator = $end_date ? '&#8239;&ndash;&#8239;' : '';
+              $separator = $end_date ? ' – ' : '';
               if ($start_date) :
                 printf(__('<span>%s%s</span>', 'ntsp'),
                   $start_date,

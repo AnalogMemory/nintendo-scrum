@@ -13,10 +13,22 @@
   .timeline {
     margin: 0;
     width: 100%;
+    position: relative;
 
     @include media($medium-screen-up) {
       width: 95%;
       margin: 0 auto 0 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 30.5%;
+        width: 14px;
+        height: 100%;
+        z-index: 5;
+        pointer-events: none;
+        background-image: linear-gradient(to bottom, #3b98cd 0%, #61e69d 100%)
+      }
     }
 
     li {
@@ -25,29 +37,12 @@
       padding: 0;
       display: flex;
       flex-direction: column;
-      border-left: 0.75em solid $red;
       background-color: $lightest-gray;
 
       @include media($medium-screen-up) {
         flex-direction: row;
         border: none;
         background: none;
-      }
-
-      &.visible {
-        .dates {
-          @include media($medium-screen-up) {
-            border-right: 0.75em solid $red;
-          }
-        }
-      }
-
-      &.invisible {
-        .dates {
-          @include media($medium-screen-up) {
-            border-right: 0.75em solid $lightest-gray;
-          }
-        }
       }
     }
 
@@ -59,7 +54,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-right: 0.75em solid $lightest-gray;
         max-width: 34%;
         flex-basis: 34%;
         padding: 2em 3em 2em 0;
@@ -74,7 +68,7 @@
         color: $lighter-gray;
 
         @include media($medium-screen-up) {
-          font-size: 2.75em;
+          font-size: 3.5em;
         }
       }
     }
