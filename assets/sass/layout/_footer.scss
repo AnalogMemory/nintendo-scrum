@@ -46,10 +46,10 @@
     display: block;
     width: 100%;
     max-width: 234px;
-    margin: 0 auto $base-spacing 0;
+    margin: 0 auto $small-spacing;
 
     @include media($medium-screen-up) {
-      margin: 0 auto $small-spacing 0;
+      margin: 0 0 $small-spacing;
       width: 234px;
       height: 0;
       overflow: hidden;
@@ -86,10 +86,13 @@
     display: flex;
     width: auto;
     justify-content: center;
-    margin-bottom: $small-spacing;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 
     @include media($medium-screen-up) {
       margin: 0;
+      flex-wrap: nowrap;
     }
 
     li {
@@ -99,9 +102,10 @@
 
       a {
         display: block;
-        padding: 0.125em 1rem;
+        padding: 0.125em 0.5rem;
         color: $dark-gray;
         font-size: 1em;
+        text-align: center;
 
         @include media($medium-screen-up) {
           padding: 0.125em 2rem;
