@@ -121,11 +121,11 @@
     }
 
     li.action-button {
-      background: $action-color;
+      background: $dark-gray;
       transition: background-color $base-duration $base-timing;
 
       &:hover {
-        background-color: rgba($action-color, 0.6);
+        background-color: $black;
       }
 
       a {
