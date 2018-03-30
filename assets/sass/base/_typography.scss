@@ -125,7 +125,7 @@ img, picture {
   text-transform: uppercase;
   font-size: 1.25em;
   color: $medium-gray;
-  
+
   @include media($medium-screen-up) {
     margin: 0;
   }
