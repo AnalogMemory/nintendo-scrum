@@ -33,6 +33,14 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           use: [
             'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                config: {
+                  path: path.resolve(__dirname, 'util/postcss.config.js')
+                }
+              }
+            },
             'sass-loader'
           ]
         })
