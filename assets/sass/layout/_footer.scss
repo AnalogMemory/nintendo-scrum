@@ -26,7 +26,7 @@
       padding: 3em 0 0;
     }
 
-    &:before {
+    &:after {
       content: '';
       left: 0;
       top: 0;
@@ -40,6 +40,7 @@
 
   .footer-col {
     display: block;
+    max-width: 100%;
   }
 
   .footer-logo {
