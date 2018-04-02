@@ -12,13 +12,11 @@ class NST_Enqueue_Scripts_Styles {
 
   public function theme_scripts_styles() {
     // Stylesheet
-    $styleModifiedAt = filemtime(get_template_directory_uri() . '/public/styles/main.css');
-    wp_enqueue_style('styles', get_template_directory_uri() . '/public/styles/main.css', null, $styleModifiedAt, 'all');
+    wp_enqueue_style('styles', get_template_directory_uri() . '/public/styles/main.css', null, null, 'all');
 
     // Javascript
-    $jsModifiedAt = filemtime(get_template_directory_uri() . '/public/scripts/main.js');
     wp_deregister_script('jquery');
-    wp_register_script('application', get_template_directory_uri() . '/public/scripts/main.js', null, $jsModifiedAt, true);
+    wp_register_script('application', get_template_directory_uri() . '/public/scripts/main.js', null, null, true);
     wp_localize_script('application', 'ajax_params', array('ajax_url' => admin_url('admin-ajax.php'),
                                                            'nonce' => wp_create_nonce('form_submission')));
     wp_enqueue_script('application');
