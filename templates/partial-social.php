@@ -19,6 +19,10 @@ global $images;
         $title = get_sub_field('type');
         $svgIcon = $images->inlineSvg('icon-' . strtolower(get_sub_field('type')) . '.svg');
 
+        if ($title == 'Email' || $title == 'email') {
+          $link = 'mailto:' . $link;
+        }
+
         printf(__('<li><a href="%s" target="_blank" title="%s">%s</a></li>', 'ntsp'),
           $link, $title, $svgIcon);
 
