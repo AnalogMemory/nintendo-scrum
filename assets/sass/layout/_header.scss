@@ -130,37 +130,6 @@
       }
     }
 
-    li.scrum-logo {
-
-      @include media($medium-screen-up) {
-        padding: 0.375rem;
-        max-height: 92px;
-        overflow: hidden;
-      }
-
-      a {
-        display: block;
-        margin: 0.75rem;
-        padding: 0;
-        height: 40px;
-        width: 100%;
-        background-image: url('../images/logo-scrum-ventures.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        overflow: hidden;
-        position: relative;
-        white-space: nowrap;
-        text-indent: 101%;
-
-        @include media($medium-screen-up) {
-          margin: 0;
-          height: 60px;
-          max-width: 120px;
-        }
-      }
-    }
-
     li.action-button {
       background: $dark-gray;
       transition: background-color $base-duration $base-timing;
