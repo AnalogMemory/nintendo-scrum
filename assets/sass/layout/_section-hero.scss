@@ -52,6 +52,19 @@
       max-width: 54%;
     }
 
+    .hero-logo {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 66%;
+      margin-bottom: 1rem;
+
+      @include media($medium-screen-up) {
+        max-width: 50%;
+        margin-bottom: 2rem;
+      }
+    }
+
     p {
       color: $darker-gray;
     }

@@ -69,23 +69,28 @@
                             "mime_types": "jpg, jpeg"
                         },
                         {
-                            "key": "field_5abd75a7dd066",
-                            "label": "Image Effects",
-                            "name": "image_effects",
-                            "type": "true_false",
+                            "key": "field_5ac662a27b005",
+                            "label": "Logo",
+                            "name": "logo",
+                            "type": "image",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "Grayscale + Gradient",
-                            "default_value": 0,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
+                            "return_format": "array",
+                            "preview_size": "medium_large",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "png, jpeg, jpg"
                         }
                     ],
                     "min": "",
@@ -145,6 +150,30 @@
                             "mime_types": "jpeg, jpg, png"
                         },
                         {
+                            "key": "field_5a8378b8249b4",
+                            "label": "Logo",
+                            "name": "logo",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
                             "key": "field_5abd838a83c31",
                             "label": "Image Position",
                             "name": "image_position",
@@ -167,25 +196,6 @@
                             "default_value": "left",
                             "layout": "horizontal",
                             "return_format": "value"
-                        },
-                        {
-                            "key": "field_5abd75de392ad",
-                            "label": "Image Effects",
-                            "name": "image_effects",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "33",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "Grayscale + Gradient",
-                            "default_value": 0,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
                         },
                         {
                             "key": "field_5abd7609392ae",
@@ -231,30 +241,6 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
-                        {
-                            "key": "field_5a8378b8249b4",
-                            "label": "Logo",
-                            "name": "logo",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "30",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
                         }
                     ],
                     "min": "",
@@ -311,25 +297,6 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
-                        },
-                        {
-                            "key": "field_5abd76c19e39f",
-                            "label": "Image Effects",
-                            "name": "image_effects",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "Grayscale + Gradient",
-                            "default_value": 0,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
                         },
                         {
                             "key": "field_5abd76dd9e3a0",
@@ -892,5 +859,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1522369469
+    "modified": 1522951483
 }
