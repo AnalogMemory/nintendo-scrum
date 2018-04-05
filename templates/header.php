@@ -12,12 +12,12 @@ global $images;
   <div class="header-inner">
     <figure class="logo">
       <?php
-        $logo = $images->inlineSvg('logo-nst-square.svg');
+        $logo = $images->imagePath('logo-scrum-ventures.png');
         if ($logo) :
           printf(__('<a href="%s" rel="home" title="%s">%s</a>', 'ntsp'),
             esc_url(get_home_url('/')),
             esc_attr(get_bloginfo('name')),
-            $logo
+            sprintf('<img src="%s" alt="" />', $logo)
           );
         endif;
       ?>

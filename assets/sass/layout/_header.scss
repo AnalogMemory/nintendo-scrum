@@ -21,15 +21,17 @@
     z-index: 10;
 
     @include media($medium-screen-up) {
-      height: 92px;
-      max-width: 242px;
+      height: 60px;
+      max-width: 90px;
       width: 100%;
+      margin: 16px;
     }
 
     svg, img {
       display: block;
       height: 100%;
       width: auto;
+
       @include media($medium-screen-up) {
         position: absolute;
         left: 0;
