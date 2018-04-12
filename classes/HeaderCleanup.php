@@ -7,6 +7,9 @@
 class NST_Header_Cleanup {
   public function __construct() {
     $this->cleanup();
+
+    // Remove All Yoast HTML Comments
+    add_action('wp_head', array($this, 'remove_yoast_comments'), ~PHP_INT_MAX);
   }
 
   public function cleanup() {
@@ -36,6 +39,12 @@ class NST_Header_Cleanup {
     remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
     remove_action('wp_head', 'wp_oembed_add_discovery_links');
     remove_action('wp_head', 'wp_oembed_add_host_js');
+  }
+
+  public function remove_yoast_comments() {
+    ob_start(function($o) {
+      return preg_replace('/^\n?<!--.*?[Y]oast.*?-->\n?$/mi', '', $o);
+    });
   }
 }
 
