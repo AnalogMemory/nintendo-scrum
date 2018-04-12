@@ -44,14 +44,14 @@
                 printf(__('<h3 class="title-timeline">%s</h3>', 'ntsp'), $title);
               endif;
               if ($copy) :
-                printf(__('<p>%s</h3>', 'ntsp'), $copy);
+                printf(__('<p>%s</p>', 'ntsp'), $copy);
               endif;
             ?>
           </div>
 
         </li>
       <?php endwhile; ?>
-    </div>
+    </ul>
   <?php endif; ?>
 
   </div>
