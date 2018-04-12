@@ -14,6 +14,7 @@ global $images;
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
   <link rel="shortcut icon" href="<?php echo $images->imagePath('favicon.png'); ?>" />
+  <link rel="apple-touch-icon-precomposed" href="<?php echo $images->imagePath('favicon-152.png'); ?>">
 
   <?php wp_head(); ?>
 
