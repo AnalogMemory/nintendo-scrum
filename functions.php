@@ -40,11 +40,6 @@ require get_template_directory() . '/classes/ACF.php';
 require get_template_directory() . '/classes/Images.php';
 
 /**
- * TinyMCE Extras
- */
-require get_template_directory() . '/classes/TinyMceExtras.php';
-
-/**
  * Custom Login Screen
  */
 require get_template_directory() . '/classes/Login.php';
